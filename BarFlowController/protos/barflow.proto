@@ -1,0 +1,27 @@
+syntax = "proto3";
+package barflow;
+
+service FlowService {
+	rpc Flow (BarflowRequest) returns (BarflowResponse) {}
+	rpc FlowLevel (FlowLevelRequest) returns (FlowLevelResponse) {}
+}
+
+message BarflowRequest {
+	int32 ControllerIdx = 1;
+	int32 TapIdx = 2;
+	int32 RegisterAddress = 3;
+	float RequiredVolume = 4;
+}
+
+message BarflowResponse {
+	bool Success = 1;
+}
+
+message FlowLevelRequest {
+	int32 ControllerIdx = 1;
+	int32 TapIdx = 2;
+}
+
+message FlowLevelResponse {
+	float VolumeDispensed = 1;
+}

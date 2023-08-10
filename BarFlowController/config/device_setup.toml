@@ -1,0 +1,16 @@
+[[devices]]
+name = "Tap1"
+address = "192.168.1.75"
+pump_address = 5
+flow_meter_address = 51
+solenoid_output_address = 0
+led_address = 2
+
+[[devices]]
+name = "Tap2"
+address = "192.168.1.75"
+pump_address = 6
+flow_meter_address = 52
+solenoid_output_address = 1
+led_address = 3
+
